@@ -1,1 +1,8 @@
-<%= @player %> vs Computer
+<%= @player.name %> vs Computer
+
+<form action = "/results" method = "post">
+  <label for ="Player_Weapon">
+    <input type="text" name ="weapon">
+    <input type ="submit" value="Submit">
+  </label>
+</form>

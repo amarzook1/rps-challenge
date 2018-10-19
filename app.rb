@@ -8,8 +8,13 @@ class Rps < Sinatra::Base
   end
   
   post '/names' do
-  @player = params[:player_name]
+  @player = Player.new(params[:player_name])
   erb :battle
+  end
+  
+  post '/results' do
+    @weapon = Game.new(params[:weapon])
+    erb :results
   end
   
   run! if app_file == $0
